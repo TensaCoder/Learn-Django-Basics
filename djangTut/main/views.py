@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse
+from django.contrib import messages
 from datetime import datetime
 from main.models import Contact
 
@@ -32,6 +33,7 @@ def contact(request):
         contact = Contact(name= name, email=email, phone=phone, description= description, date=datetime.today())
         contact.save()
 
+        messages.success(request, 'Your message has been sent!')
 
     return render(request, 'contact.html')
     
