@@ -7,10 +7,11 @@
     <h1 class="text-center">Contact Us</h1>
 
     <div class="container" style="width: 800px;">
-        <form>
+        <form method="post" action="/contact/">
+            {% csrf_token %}
             <div class="form-group my-3">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control my-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="text" class="form-control my-2" id="exampleInputEmail1" aria-describedby="emailHelp"
                     placeholder="Enter email">
             </div>
 
