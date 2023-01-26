@@ -9,15 +9,27 @@
     <div class="container" style="width: 800px;">
         <form method="post" action="/contact/">
             {% csrf_token %}
+
+            <div class="form-group my-3">
+                <label for="exampleInputName">Name</label>
+                <input type="text" class="form-control my-2" id="exampleInputName" name="name" placeholder="Enter Name">
+            </div>
+
             <div class="form-group my-3">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="text" class="form-control my-2" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <input type="text" class="form-control my-2" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
                     placeholder="Enter email">
             </div>
 
             <div class="form-group my-3">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control my-2" id="exampleInputPassword1" placeholder="Password">
+                <label for="exampleInputName">Phone Number</label>
+                <input type="text" class="form-control my-2" id="exampleInputPhone" name="phone" placeholder="Enter Phone Number">
+            </div>
+
+            <div class="form-group my-3">
+                <label for="exampleInputName">Phone Number</label>
+                <!-- <input type="text" class="form-control my-2" id="exampleInputName" placeholder="Enter Phone Number"> -->
+                <textarea name="description" id="description" cols="30" rows="7" placeholder="Enter Description ..." class="form-control my-2"></textarea>
             </div>
 
             <div class="d-flex justify-content-center my-3">

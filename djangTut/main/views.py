@@ -18,6 +18,7 @@ def services(request):
 def contact(request):
     if request.method == "POST":
         print("form is submitted!")
+        # name = 
     
     return render(request, 'contact.html')
     
